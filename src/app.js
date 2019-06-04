@@ -6,6 +6,8 @@ const hbs = require('hbs');
 
 const app = express();
 
+const port = process.env.PORT
+
 // Defined Path for Express Config
 const publicFolder = path.join(__dirname, '../publicFolder');
 const viewPath = path.join(__dirname, '../templates/views');
@@ -90,6 +92,6 @@ app.get('*', (req, res) => {
 
 
 
-app.listen(3000, () => {
-    console.log('Application has started on port 3000')
+app.listen(port, () => {
+    console.log(`Application has started on port ${port}`)
 })

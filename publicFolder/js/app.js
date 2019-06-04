@@ -8,7 +8,7 @@ weatherForm.addEventListener('submit', (event) => {
     let city = address.value
     messageOne.innerHTML = 'loading'
     messageTwo.innerHTML = ''
-    fetch (`http://localhost:3000/weather?address=${city}`)
+    fetch (`/weather?address=${city}`)
 
     .then(response => {
         return response.json()
