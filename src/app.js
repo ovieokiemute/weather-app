@@ -6,7 +6,8 @@ const hbs = require('hbs');
 
 const app = express();
 
-const port = process.env.PORT
+const port = process.env.PORT || 3000;
+
 
 // Defined Path for Express Config
 const publicFolder = path.join(__dirname, '../publicFolder');
@@ -86,7 +87,7 @@ app.get('*', (req, res) => {
         name: 'Okiemute',
         errorMessage: 'Page not found'
     })
-})
+});
 
 
 
